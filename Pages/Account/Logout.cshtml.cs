@@ -1,11 +1,9 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Autenticacion.Pages.Student
+namespace Autenticacion.Pages.Account
 {
-    [Authorize]
-    public class StudentModel : PageModel
+    public class LogoutModel : PageModel
     {
         public void OnGet()
         {
