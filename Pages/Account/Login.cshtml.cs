@@ -19,16 +19,16 @@ namespace Autenticacion.Pages.Account
         {
             if (!ModelState.IsValid) return Page();
 
-            if (User.Email == "correo@gmail.com" && User.Password == "123456")
+            if (User.Email == "correo@gmail.com" && User.Password == "12345")
             {
-                /// creación de los claims
+                /// 
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, "admin"),
                     new Claim(ClaimTypes.Email,User.Email),
                 };
 
-                // se asocian los claims creados a un nombre de código
+                // se asocia los claims creados a un nombre de cookie
                 var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                 // se agrega la identidad creada al claims principal de la aplicación
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
