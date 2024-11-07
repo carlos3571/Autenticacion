@@ -11,7 +11,7 @@ namespace Autenticacion
             builder.Services.AddAuthentication().AddCookie("MyCookieAuth", options =>
             {
                 options.Cookie.Name = "MyCookieAuth";
-                options.LoginPath = "/Account/Login";
+                options.LoginPath = "/Account/Login"; //si no esta autenticado cargue la pagina Login 
             });
 
             var app = builder.Build();
